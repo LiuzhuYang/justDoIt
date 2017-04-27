@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2WB-zH-KZG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -32,7 +32,7 @@
         <!--Item 1-->
         <scene sceneID="uY1-4K-lMf">
             <objects>
-                <viewController id="bWi-pD-9t3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="bWi-pD-9t3" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DdS-Cb-m64"/>
                         <viewControllerLayoutGuide type="bottom" id="RCA-P1-6iN"/>
@@ -86,6 +86,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jn8-HR-3lh">
+                                <rect key="frame" x="135" y="223" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZ0-pa-821">
+                                <rect key="frame" x="49" y="223" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="mairuTest:" destination="bWi-pD-9t3" eventType="touchUpInside" id="6W2-y0-kNW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lr-lE-8F3">
+                                <rect key="frame" x="160" y="274" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="刷新"/>
+                                <connections>
+                                    <action selector="shuaxin:" destination="bWi-pD-9t3" eventType="touchUpInside" id="HhS-tB-90G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiF-d4-6Aj">
+                                <rect key="frame" x="260" y="219" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="maichuTest:" destination="bWi-pD-9t3" eventType="touchUpInside" id="1Ci-tc-hOE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -107,6 +138,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="VLj-Cr-RfX"/>
+                    <connections>
+                        <outlet property="buyAllMoney" destination="dM5-v8-iPH" id="CYo-1L-fx0"/>
+                        <outlet property="moneyTF" destination="Jn8-HR-3lh" id="Pr5-Tz-ro1"/>
+                        <outlet property="myMoney" destination="blC-ZR-2nh" id="GMX-8N-Bov"/>
+                        <outlet property="sellAllMoney" destination="l2d-Sz-Q1K" id="fd7-Yp-SFI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bD2-UZ-jV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

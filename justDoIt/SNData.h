@@ -10,5 +10,7 @@
 
 @interface SNData : NSObject
 
-
++ (void)saveMoney:(NSString *)shareId money:(NSString *)money time:(NSString*)time;
++(NSString*)loadSellMoney;
++(NSString*)loadBuyMoney;
 @end
